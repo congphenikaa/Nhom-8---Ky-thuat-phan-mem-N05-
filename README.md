@@ -10,6 +10,10 @@ Web chia sẻ công thức nấu ăn Cook Time! là một công cụ số hóa g
 
 Web nhắm tới những đối tượng đam mê nấu ăn, từ các đầu bếp gia đình cho đến những người mới bắt đầu học nấu ăn. Đặc biệt, nó hữu ích cho những người muốn có một kho lưu trữ cá nhân hóa các công thức mà họ đã sưu tầm hoặc tự sáng tạo, thay vì phải ghi chép thủ công hoặc tìm kiếm trên nhiều nguồn khác nhau
 
+## Giải quyết vấn đề
+
+Nhiều người gặp khó khăn trong việc lưu trữ và quản lý công thức nấu ăn, đặc biệt là khi số lượng công thức ngày càng nhiều. Việc tìm kiếm công thức nấu ăn cụ thể trong hàng chục, thậm chí hàng trăm công thức có thể mất rất nhiều thời gian và công sức. Ứng dụng này giải quyết vấn đề đó bằng cách cung cấp một hệ thống lưu trữ dễ dàng sắp xếp và truy xuất. Ngoài ra, người dùng có thể bổ sung ghi chú cá nhân, đánh giá món ăn, chia sẻ và điều chỉnh công thức để phù hợp với khẩu vị của mình.
+
 ## Tính năng
 
 - **Lưu trữ công thức cá nhân**: Người dùng có thể nhập và lưu công thức với các thông tin như tên món ăn, danh sách nguyên liệu, hướng dẫn chế biến, và thời gian nấu.
@@ -20,6 +24,5 @@ Web nhắm tới những đối tượng đam mê nấu ăn, từ các đầu b�
 ## Công nghệ sử dụng
 
 - **Frontend**: HTML, CSS, JavaScript, phát triển và dễ dàng mở rộng hoặc điều chỉnh khi cần thiết.
-- **Backend**: : Đối với MVP, có thể bắt đầu với việc lưu trữ dữ liệu cục bộ (sử dụng SQLite) hoặc Firebase cho tính năng lưu trữ và đồng bộ dữ liệu đơn giản. Firebase là một lựa chọn tốt cho việc lưu trữ dữ liệu trên đám mây, giúp người dùng dễ dàng đồng bộ công thức trên nhiều thiết bị.
 - **Thiết kế giao diện người dùng (UI/UX)**: Sử dụng Figma hoặc Adobe XD để thiết kế giao diện đơn giản, thân thiện và dễ sử dụng. Thiết kế sẽ tập trung vào việc hiển thị thông tin một cách trực quan và dễ dàng truy cập.
 
