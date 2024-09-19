@@ -378,20 +378,6 @@ footer {
     }
 }
 
-.rating img {
-    width: 100px; /* Điều chỉnh kích thước ảnh 5 sao */
-}
-
-.recipe-card .rating {
-    margin: 10px 0;
-}
-
-.recipe-card .rating i {
-    color: gold;
-    font-size: 20px;
-    margin: 0 2px;
-}
-
 .recipe-card .btn {
     background-color: #ff6347; /* Màu nền nút */
     color: #fff;
@@ -411,3 +397,28 @@ footer {
     transform: scale(1.05); /* Hiệu ứng phóng to nhẹ khi hover thẻ */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
+
+.rating i {
+    color: #ccc; /* Màu sao khi chưa được chọn */
+    font-size: 20px;
+    margin: 0 2px;
+    cursor: pointer; /* Con trỏ dạng pointer khi di chuột */
+    transition: color 0.2s;
+}
+
+.rating i.selected {
+    color: gold; /* Màu vàng cho sao khi được chọn */
+}
+
+.rating img {
+    width: 100px; /* Điều chỉnh kích thước ảnh 5 sao */
+}
+
+.recipe-card .rating {
+    margin: 10px 0;
+}
+
+.checked {
+    color: gold;
+}
+
