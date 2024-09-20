@@ -84,4 +84,42 @@ recipeCards.forEach((card) => {
     });
 });
 
+// Hiển thị/ẩn dropdown khi nhấn vào ảnh đại diện
+document.getElementById("profile-img").addEventListener("click", function(event) {
+    var dropdown = document.getElementById("dropdown-menu");
+    // Chuyển đổi giữa ẩn và hiển thị dropdown
+    dropdown.style.display = dropdown.style.display === "none" || dropdown.style.display === "" ? "block" : "none";
+    event.stopPropagation(); // Ngăn việc đóng dropdown khi nhấn vào ảnh đại diện
+});
 
+// Xử lý chức năng đăng xuất
+document.getElementById('logout-btn').addEventListener('click', function() {
+    // Xóa trạng thái đăng ký khỏi localStorage
+    localStorage.removeItem('isRegistered');
+    // Tải lại trang để hiển thị lại phần đăng nhập
+    window.location.reload();
+});
+
+// Kiểm tra trạng thái đăng ký khi tải trang
+window.onload = function() {
+    if (localStorage.getItem('isRegistered') === 'true') {
+        // Hiển thị phần logout-section với ảnh đại diện
+        document.getElementById('logout-section').style.display = 'block';
+        document.getElementById('login-section').style.display = 'none';
+    } else {
+        // Hiển thị phần đăng nhập nếu chưa đăng ký
+        document.getElementById('login-section').style.display = 'block';
+        document.getElementById('logout-section').style.display = 'none';
+    }
+};
+
+// Đóng dropdown khi nhấn bên ngoài ảnh đại diện và dropdown menu
+window.addEventListener('click', function(event) {
+    var dropdownMenu = document.getElementById('dropdown-menu');
+    var profileImg = document.getElementById('profile-img');
+    
+    // Kiểm tra nếu nhấn bên ngoài dropdown và ảnh đại diện thì đóng dropdown
+    if (dropdownMenu.style.display === "block" && !event.target.closest('#profile-img') && !event.target.closest('#dropdown-menu')) {
+        dropdownMenu.style.display = 'none';
+    }
+});

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Nhập</title>
+    <link rel="stylesheet" href="styles1.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-form">
+            <h1>Đăng Nhập</h1>
+            <form id="login-form">
+                <div class="input-group">
+                    <label for="username">Tên đăng nhập</label>
+                    <input type="text" id="username" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Mật khẩu</label>
+                    <input type="password" id="password" required>
+                </div>
+                <button type="submit">Đăng Nhập</button>
+                <div class="footer-links">
+                    <p>Đã có tài khoản? <a href="dangki.html">Đăng kí</a></p>
+                    <p class="forgot-password">Quên mật khẩu? <span class="reset-link">Đặt lại ngay</span></p>
+                </div>                
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('login-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Ngăn chặn hành động mặc định của biểu mẫu
+
+            // Thêm logic kiểm tra tên đăng nhập và mật khẩu (tạm thời giả định thành công)
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Ở đây bạn có thể thêm kiểm tra tên đăng nhập và mật khẩu từ cơ sở dữ liệu
+
+            // Giả sử đăng nhập thành công:
+            if (username && password) { // Kiểm tra đơn giản
+                localStorage.setItem('isRegistered', 'true'); // Lưu trạng thái đăng nhập
+                window.location.href = 'chinh.html'; // Chuyển hướng về trang chính
+            }
+        });
+    </script>
+</body>
+</html>
