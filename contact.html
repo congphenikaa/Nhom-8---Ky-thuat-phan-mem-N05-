@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Restaurant Website</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo"><img src="anh/logo.png" alt="logo">It's<span>cooktime</span></div>
+            
+            <!-- Đặt thanh tìm kiếm vào giữa logo và menu -->
+            <div class="search-bar">
+                <input type="text" id="search" placeholder="Tìm kiếm công thức...">
+                <img src="anh/search.png" alt="Tìm kiếm" class="search-icon">
+            </div>
+            
+            
+            <nav>
+                <ul>
+                    <li><a href="chinh.html">Home</a></li>
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <div id="login-section">
+                        <li><a href="dangki.html">Log/Sign In</a></li> <!-- Link đến trang đăng ký -->
+                    </div>
+                    <div id="logout-section" style="display: none;">
+                        <div class="profile-container">
+                            <img src="anh/daidien.jpg" alt="Profile Picture" id="profile-img">
+                            <ul id="dropdown-menu" class="dropdown-menu" style="display: none;">
+                                <li><button id="logout-btn">Đăng xuất</button></li>
+                            </ul>
+                        </div>
+                    </div>                    
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="contact-container">
+            <h2 class="section-title">Liên Hệ Với Chúng Tôi</h2>
+            <p class="section-description">Chúng tôi rất vui lòng được nghe từ bạn. Hãy để lại thông tin và chúng tôi sẽ liên hệ lại trong thời gian sớm nhất.</p>
+
+            <div class="contact-wrapper">
+                <div class="contact-form">
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Họ và tên</label>
+                            <input type="text" id="name" name="name" placeholder="Nhập họ và tên của bạn" required>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Nhập địa chỉ email" required>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="subject">Chủ đề</label>
+                            <input type="text" id="subject" name="subject" placeholder="Chủ đề liên hệ" required>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="message">Nội dung tin nhắn</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Nội dung tin nhắn của bạn..." required></textarea>
+                        </div>
+    
+                        <button type="submit" class="btn-submit">Gửi Tin Nhắn</button>
+                    </form>
+                    <p id="success-message" style="display: none; color: green; font-weight: bold;">Gửi thành công! Trang sẽ được tải lại...</p>
+                </div>
+
+                <div class="contact-info">
+                    <h3>Thông Tin Liên Hệ</h3>
+                    <p><i class="fas fa-envelope"></i> Email: contact@foodwebsite.com</p>
+                    <p><i class="fas fa-phone"></i> Điện thoại: 0123-456-789</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Địa chỉ: 123 Đường Ăn Uống, Quận 5, TP. Hồ Chí Minh</p>
+                    <p><i class="fas fa-clock"></i> Giờ làm việc: Thứ 2 - Thứ 6, 9:00 - 18:00</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section about">
+                <h2>Về Chúng Tôi</h2>
+                <p>
+                    Chúng tôi là trang web chuyên chia sẻ các công thức nấu ăn, mẹo vặt ẩm thực, và những trải nghiệm ăn uống thú vị từ khắp nơi trên thế giới. Cùng khám phá và nấu những món ăn ngon với chúng tôi!
+                </p>
+            </div>
+
+            <div class="footer-section contact">
+                <h2>Liên Hệ</h2>
+                <p><i class="fas fa-envelope"></i> Email: contact@foodwebsite.com</p>
+                <p><i class="fas fa-phone"></i> Điện thoại: 0123-456-789</p>
+                <p><i class="fas fa-map-marker-alt"></i> Địa chỉ: 123 Đường Ăn Uống, Quận 5, TP. Hồ Chí Minh</p>
+                <p><i class="fas fa-clock"></i> Giờ làm việc: Thứ 2 - Thứ 6, 9:00 - 18:00</p>
+            </div>
+
+            <div class="footer-section newsletter">
+                <h2>Đăng Ký Nhận Tin</h2>
+                <p>Nhận công thức nấu ăn và mẹo vặt hàng tuần từ chúng tôi!</p>
+                <form action="#">
+                    <input type="email" placeholder="Nhập email của bạn" required>
+                    <button type="submit" class="btn">Đăng Ký</button>
+                </form>
+            </div>
+
+            <div class="footer-section links">
+                <h2>Liên Kết Nhanh</h2>
+                <ul>
+                    <li><a href="#">Công Thức Mới Nhất</a></li>
+                    <li><a href="#">Bài Viết Phổ Biến</a></li>
+                    <li><a href="#">Khuyến Mãi Đặc Biệt</a></li>
+                    <li><a href="#">Chính Sách Bảo Mật</a></li>
+                    <li><a href="#">Điều Khoản Dịch Vụ</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+
+            
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 FoodWebsite | Mọi quyền được bảo lưu.</p>
+        </div>
+    </footer>
+
+    <script src="style2.js"></script>
+</body>
+</html>
