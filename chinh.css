@@ -491,3 +491,68 @@ footer {
     color: #e0523a; /* Màu thay đổi khi hover */
 }
 
+/* Phong cách cho thanh tìm kiếm */
+.search-bar {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    width: 100%; /* Đảm bảo search-bar rộng bằng với kích thước màn hình */
+    max-width: 600px;
+}
+
+#search {
+    width: 100%;
+    max-width: 600px; /* Tăng chiều rộng cho chế độ màn hình lớn */
+    padding: 12px 20px;
+    padding-left: 45px; /* Tạo khoảng trống cho biểu tượng kính lúp */
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 50px;
+    outline: none;
+    transition: all 0.3s ease;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 40px;
+    line-height: 1.5;
+    position: relative;
+}
+
+/* Biểu tượng kính lúp nằm trong ô tìm kiếm */
+
+.search-icon {
+    position: absolute;
+    left: 1em; /* Vị trí của biểu tượng so với cạnh trái */
+    top: 50%;
+    transform: translateY(-50%); /* Căn giữa theo chiều dọc */
+    width: 1.5em;
+    height: 1.5em;
+    pointer-events: none; /* Không làm ảnh hưởng đến các tương tác người dùng */
+}
+
+
+/* Hiệu ứng khi nhấn vào thanh tìm kiếm */
+#search:focus {
+    border-color: #ff7f50;
+    background-color: #fff;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Placeholder màu nhẹ */
+#search::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+
+/* Hiệu ứng hover */
+#search:hover {
+    border-color: #ffa07a;
+    box-shadow: 0 5px 7px rgba(0, 0, 0, 0.15);
+}
+
+input[type="text"] {
+    padding-left: 3em; /* Chừa khoảng trống bên trái cho biểu tượng */
+    width: 100%;
+    box-sizing: border-box; /* Đảm bảo không tràn ra ngoài */
+}
+

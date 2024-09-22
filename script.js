@@ -16,6 +16,6 @@ document.getElementById('signup-form').addEventListener('submit', function(event
     localStorage.setItem('isRegistered', 'true'); // Lưu trạng thái đăng ký
     alert('Đăng ký thành công!');
 
-    // Chuyển hướng về trang chính hoặc trang đăng nhập
-    window.location.href = 'login.html'; // Chuyển đến trang đăng nhập
+    // Chuyển hướng đến trang xác nhận đăng ký thành công
+    window.location.href = 'confirmation.html'; // Chuyển đến trang xác nhận
 });
