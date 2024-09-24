@@ -20,14 +20,13 @@ body {
 
 /* Header */
 header {
-    background-color: #fff;
+    background-color: #FF6347;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 10px 0;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    position: fixed;
 }
 
 .container {
@@ -54,7 +53,7 @@ header {
 }
 
 .logo span {
-    color: #FF6347;
+    color: whitesmoke;
     line-height: 1; /* Điều chỉnh dòng để tránh chữ bị lệch */
 }
 
