@@ -1,0 +1,444 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    background-color: #FF6347;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1900px; /* Tùy chọn chiều rộng tối đa */
+    padding: 0 20px;
+}
+
+
+.logo {
+    display: flex;
+    align-items: center; /* Căn giữa ảnh và chữ theo chiều dọc */
+    font-size: 24px; /* Kích thước chữ */
+    font-weight: bold;
+}
+
+.logo img {
+    height: 40px; /* Điều chỉnh chiều cao ảnh để phù hợp với chữ */
+    margin-right: 10px; /* Khoảng cách giữa ảnh và chữ */
+    vertical-align: middle; /* Đảm bảo ảnh căn giữa theo trục chữ */
+}
+
+.logo span {
+    color: whitesmoke;
+    line-height: 1; /* Điều chỉnh dòng để tránh chữ bị lệch */
+}
+
+/* Search bar alignment */
+.search-bar {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.search-bar input {
+    padding: 10px 15px;
+    border-radius: 30px; /* Tạo bo tròn */
+    border: 1px solid #ddd;
+    width: 100%;
+    max-width: 300px; /* Đảm bảo kích thước không quá lớn */
+}
+
+/* Navigation menu */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+nav a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* Đảm bảo logo và menu sát lề */
+.container .logo {
+    margin-right: 20px;
+}
+
+.container nav {
+    margin-left: 20px;
+}
+
+/* Main */
+/* Chỉ áp dụng cho các phần tử trong thẻ <main> */
+main .recipe-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+main .recipe-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+main .recipe-header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+main .recipe-header p {
+    font-size: 1.2em;
+    color: #666;
+}
+
+main .recipe-info {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+main .info-item {
+    display: flex;
+    align-items: center;
+}
+
+main .info-item i {
+    margin-right: 5px;
+    font-size: 1.5em;
+}
+
+/* Bố cục dùng flexbox để căn giữa nội dung mô tả và video */
+main .recipe-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: flex-start; /* Căn chỉnh từ trên cùng */
+}
+
+/* Mô tả món ăn ở bên trái */
+main .recipe-description {
+    flex: 1;
+}
+
+main .recipe-description p {
+    font-size: 1.2em;
+    color: #666;
+}
+
+/* Ảnh minh họa món ăn */
+main .recipe-image img {
+    width: 100%;
+    max-height: 300px; /* Điều chỉnh chiều cao tối đa của ảnh */
+    object-fit: cover; /* Giữ tỷ lệ ảnh */
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* Phần video ở bên phải */
+main .recipe-video {
+    flex: 1;
+    position: relative;
+    margin: 20px 0;
+}
+
+main .recipe-video video {
+    width: 100%;
+    max-height: 300px; /* Điều chỉnh chiều cao tối đa của video */
+    border-radius: 10px;
+}
+
+main .save-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+main .quantity-selector {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+main .qty-btn {
+    background-color: #f0f0f0;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+main #qty-value {
+    font-size: 1.5em;
+}
+
+main .recipe-details {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+main .ingredients, main .tools, main .directions {
+    width: 30%;
+}
+
+main h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+main ul, main ol {
+    margin: 0;
+    padding-left: 20px;
+}
+
+main ul li, main ol li {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+
+
+
+
+
+
+/* Footer */
+footer {
+    background-color: #333;
+    background-image: url('anh/footer.png'); /* Đường dẫn đến ảnh */
+    background-size: cover; /* Đảm bảo ảnh phủ kín vùng footer */
+    background-position: center; /* Căn giữa ảnh trong footer */
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    background-repeat: no-repeat; /* Tránh lặp lại ảnh */
+}
+
+/* Media Queries */
+/* Màn hình nhỏ hơn 768px (tablet, mobile) */
+@media (max-width: 768px) {
+    header {
+        padding: 10px 0; /* Giữ header nhỏ hơn cho màn hình nhỏ */
+    }
+
+    .hero-content h1 {
+        font-size: 28px; /* Giảm kích thước font chữ của tiêu đề */
+    }
+
+    .hero-content p {
+        font-size: 16px; /* Giảm kích thước font chữ mô tả */
+    }
+}
+
+/* Màn hình nhỏ hơn 480px (mobile) */
+@media (max-width: 480px) {
+    .logo {
+        font-size: 18px; /* Giảm kích thước font chữ logo */
+    }
+
+    nav ul {
+        flex-direction: column; /* Menu chuyển thành cột cho màn hình nhỏ */
+        gap: 10px;
+    }
+
+    .search-bar input {
+        width: 100%; /* Thanh tìm kiếm chiếm toàn bộ chiều rộng */
+    }
+
+    .hero-content h1 {
+        font-size: 24px; /* Giảm kích thước chữ tiêu đề */
+    }
+
+    .hero-content p {
+        font-size: 14px; /* Giảm kích thước chữ mô tả */
+    }
+
+    .btn {
+        padding: 10px 20px; /* Giảm padding cho nút */
+        font-size: 14px;
+    }
+}
+
+/* Màn hình nhỏ hơn 768px (tablet, mobile) */
+@media (max-width: 768px) {
+    main .recipe-image img,
+    main .recipe-video video {
+        max-height: 200px; /* Điều chỉnh chiều cao tối đa cho thiết bị nhỏ */
+    }
+
+    main .recipe-header h1 {
+        font-size: 2em; /* Giảm kích thước font chữ của tiêu đề */
+    }
+
+    main .recipe-header p {
+        font-size: 1em; /* Giảm kích thước font chữ mô tả */
+    }
+
+    main .qty-btn {
+        font-size: 1.2em; /* Giảm kích thước nút */
+    }
+
+    main #qty-value {
+        font-size: 1.2em; /* Giảm kích thước giá trị */
+    }
+
+    main h3 {
+        font-size: 1.2em; /* Giảm kích thước tiêu đề trong chi tiết công thức */
+    }
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    /* Cho phép các phần tử bên trong tự xuống dòng khi không đủ không gian */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 20px;
+    min-width: 250px;
+    /* Đảm bảo mỗi phần không nhỏ hơn kích thước này */
+}
+
+.footer-section h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #FF6347;
+}
+
+.footer-section p,
+.footer-section ul {
+    font-size: 16px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #FF6347;
+}
+
+.social-icons a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #FF6347;
+}
+
+.footer-bottom {
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Media Queries cho màn hình nhỏ */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        /* Sắp xếp theo cột khi màn hình nhỏ */
+        align-items: center;
+        /* Căn giữa các mục */
+    }
+    .footer-section {
+        min-width: 100%;
+        /* Đảm bảo mỗi mục chiếm toàn bộ chiều rộng màn hình nhỏ */
+        text-align: center;
+        /* Căn giữa nội dung */
+        margin: 20px 0;
+    }
+    .footer-section ul {
+        padding-left: 0;
+    }
+    .footer-section.newsletter form {
+        flex-direction: column;
+        /* Form đăng ký nhận tin sẽ sắp xếp theo cột */
+    }
+    .footer-section.newsletter input {
+        margin-bottom: 10px;
+        width: 80%;
+        /* Điều chỉnh kích thước input khi ở màn hình nhỏ */
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-section h2 {
+        font-size: 18px;
+    }
+    .footer-section p,
+    .footer-section ul {
+        font-size: 14px;
+    }
+    .social-icons a {
+        font-size: 18px;
+    }
+    .footer-section ul li {
+        margin-bottom: 8px;
+    }
+    .footer-section.newsletter input {
+        width: 100%;
+        /* Ở màn hình nhỏ hơn, form đăng ký chiếm toàn bộ chiều rộng */
+    }
+}
