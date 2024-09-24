@@ -556,3 +556,119 @@ input[type="text"] {
     box-sizing: border-box; /* Đảm bảo không tràn ra ngoài */
 }
 
+/* Contact Section Styles */
+#contact {
+    padding: 60px 0;
+    background-image: url('anh/contact.jpg'); /* Đường dẫn đến ảnh nền */
+    background-size: cover; /* Tự động điều chỉnh kích thước ảnh để phủ đầy */
+    background-position: center; /* Đặt ảnh ở giữa màn hình */
+    background-repeat: no-repeat; /* Không lặp lại ảnh */
+    background-attachment: fixed; /* Ảnh sẽ không cuộn khi người dùng cuộn trang */
+}
+
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5em;
+    color: #E27D60;
+    margin-bottom: 20px;
+}
+
+.section-description {
+    text-align: center;
+    font-size: 1.2em;
+    color: #F4A261;
+    margin-bottom: 40px;
+}
+
+.contact-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.contact-form, .contact-info {
+    flex: 1;
+    min-width: 300px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form {
+    flex: 1.5;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+    border-color: #ff5722;
+}
+
+.btn-submit {
+    background-color: #ff5722;
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1.2em;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.btn-submit:hover {
+    background-color: #e64a19;
+}
+
+.contact-info h3 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.contact-info p {
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.contact-info i {
+    color: #ff5722;
+    margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+    .contact-wrapper {
+        flex-direction: column;
+    }
+}
+
