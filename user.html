@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Restaurant Website</title>
+    <link rel="stylesheet" href="user.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo"><img src="anh/logo.png" alt="logo">It's<span>cooktime</span></div>
+            <div class="search-bar">
+                <input type="text" id="search" placeholder="Tìm kiếm công thức...">
+                <img src="anh/search.png" alt="Tìm kiếm" class="search-icon">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <div id="login-section">
+                        <li><a href="dangki.html">Log/Sign In</a></li>
+                    </div>
+                    <div id="logout-section" style="display: none;">
+                        <div class="profile-container">
+                            <img src="anh/daidien.jpg" alt="Profile Picture" id="profile-img">
+                            <ul id="dropdown-menu" class="dropdown-menu" style="display: none;">
+                                <li><button id="logout-btn">Đăng xuất</button></li>
+                            </ul>
+                        </div>
+                    </div>                    
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+ <!-- Main Section -->
+<main id="recipe-main">
+    <section id="user-profile">
+        <div class="profile-container">
+            <img src="anh/daidien.jpg" alt="Profile Picture" id="profile-img">
+            <div class="profile-info">
+                <h2>Long Chu Viet</h2>
+                <p>@cook_110243345</p>
+                <button class="profile-btn">Xem Trang Bếp</button>
+            </div>
+        </div>
+        <div id="dropdown-menu" style="display:none;">
+            <p>Tài khoản</p>
+            <p>Đăng xuất</p>
+        </div>
+        <div class="tab-section">
+            <ul class="tab">
+                <li class="tablinks" onclick="opentab(event, 'tab-1')">Đã lưu</li>
+                <li class="tablinks" onclick="opentab(event, 'tab-2')">Món Của Tôi</li>
+                <li class="tablinks" onclick="opentab(event, 'tab-3')">Cooksnap</li>
+            </ul>
+            
+            <div id="tab-1" class="tabcontent active">
+                <p>Danh sách món đã lưu sẽ hiển thị tại đây.</p>
+            </div>
+            <div id="tab-2" class="tabcontent">
+                <div class="no-recipe">
+                    <img src="anh/logo.png" alt="No Recipe Icon">
+                    <p>Nào, bắt đầu viết cách làm món đầu tiên thôi!</p>
+                    <button class="write-recipe-btn">Viết món mới</button>
+                </div>
+            </div>
+            <div id="tab-3" class="tabcontent">
+                <p>Cooksnap của bạn sẽ hiển thị tại đây.</p>
+            </div>
+        </div>
+    </section>
+ </main>
+ 
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section about">
+                <h2>Về Chúng Tôi</h2>
+                <p>
+                    Chúng tôi là trang web chuyên chia sẻ các công thức nấu ăn, mẹo vặt ẩm thực, và những trải nghiệm ăn uống thú vị từ khắp nơi trên thế giới. Cùng khám phá và nấu những món ăn ngon với chúng tôi!
+                </p>
+            </div>
+
+            <div class="footer-section contact">
+                <h2>Liên Hệ</h2>
+                <p><i class="fas fa-envelope"></i> Email: contact@foodwebsite.com</p>
+                <p><i class="fas fa-phone"></i> Điện thoại: 0123-456-789</p>
+                <p><i class="fas fa-map-marker-alt"></i> Địa chỉ: 123 Đường Ăn Uống, Quận 5, TP. Hồ Chí Minh</p>
+                <p><i class="fas fa-clock"></i> Giờ làm việc: Thứ 2 - Thứ 6, 9:00 - 18:00</p>
+            </div>
+
+            <div class="footer-section newsletter">
+                <h2>Đăng Ký Nhận Tin</h2>
+                <p>Nhận công thức nấu ăn và mẹo vặt hàng tuần từ chúng tôi!</p>
+                <form action="#">
+                    <input type="email" placeholder="Nhập email của bạn" required>
+                    <button type="submit" class="btn">Đăng Ký</button>
+                </form>
+            </div>
+
+            <div class="footer-section links">
+                <h2>Liên Kết Nhanh</h2>
+                <ul>
+                    <li><a href="#">Công Thức Mới Nhất</a></li>
+                    <li><a href="#">Bài Viết Phổ Biến</a></li>
+                    <li><a href="#">Khuyến Mãi Đặc Biệt</a></li>
+                    <li><a href="#">Chính Sách Bảo Mật</a></li>
+                    <li><a href="#">Điều Khoản Dịch Vụ</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 FoodWebsite | Mọi quyền được bảo lưu.</p>
+        </div>
+    </footer>
+
+    <script src="user.js">
+    </script>
+</body>
+</html>
