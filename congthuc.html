@@ -18,7 +18,7 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="#">Home</a></li>
+                    <li><a href="chinh.html">Home</a></li>
                     <li><a href="#">Menu</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="contact.html">Contact</a></li>
@@ -52,6 +52,7 @@
                     <div class="info-item">
                         <i class="fas fa-hat-chef"></i>
                         <span>Easy</span>
+                        <span id="rating-score">4.5/5</span>
                     </div>
                 </div>
             </div>
@@ -110,6 +111,26 @@
                     </ol>
                 </div>
             </div>
+            <div class="rating-comment-section">
+                <h3>Đánh giá món ăn</h3>
+                <div class="rating-stars">
+                    <i class="fas fa-star" data-rating="1"></i>
+                    <i class="fas fa-star" data-rating="2"></i>
+                    <i class="fas fa-star" data-rating="3"></i>
+                    <i class="fas fa-star" data-rating="4"></i>
+                    <i class="fas fa-star" data-rating="5"></i>
+                </div>
+                <textarea id="comment-box" placeholder="Viết bình luận của bạn..."></textarea>
+                <button id="submit-comment">Gửi bình luận</button>
+            </div>
+    
+            <div class="comments-section">
+                <ul id="comments-list"></ul> <!-- Nơi hiển thị các bình luận -->
+            </div>
+    
+            <!-- Thêm nút báo cáo -->
+            <button id="report-btn" class="report-btn">Báo cáo sai phạm</button>
+        </div>
         </div>
     </main>
     

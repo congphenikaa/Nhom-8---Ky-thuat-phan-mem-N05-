@@ -1,43 +1,60 @@
 // script.js
 
-// Search functionality
+// Chức năng tìm kiếm
 document.getElementById('search').addEventListener('keyup', function (e) {
-    const searchQuery = e.target.value.toLowerCase();
-    const recipes = document.querySelectorAll('.recipe-card');
+    const searchQuery = e.target.value.toLowerCase(); // Lấy giá trị tìm kiếm từ người dùng và chuyển về chữ thường
+    const recipes = document.querySelectorAll('.recipe-card'); // Lấy tất cả các thẻ công thức món ăn
 
     recipes.forEach(function (recipe) {
-        const recipeName = recipe.querySelector('h3').textContent.toLowerCase();
+        const recipeName = recipe.querySelector('h3').textContent.toLowerCase(); // Lấy tên của món ăn và chuyển về chữ thường
         if (recipeName.includes(searchQuery)) {
-            recipe.style.display = 'block';
+            recipe.style.display = 'block'; // Hiển thị thẻ công thức nếu tên món ăn khớp với tìm kiếm
         } else {
-            recipe.style.display = 'none';
+            recipe.style.display = 'none'; // Ẩn thẻ công thức nếu không khớp
         }
     });
 });
 
-// Discover Recipe Button Functionality
+// Chức năng nút khám phá công thức
 const recipeButtons = document.querySelectorAll('.btn');
 recipeButtons.forEach(button => {
     button.addEventListener('click', function (e) {
-        const recipeName = this.parentElement.querySelector('h3').textContent;
-        alert(`Discover more about the recipe: ${recipeName}`);
+        const recipeName = this.parentElement.querySelector('h3').textContent; // Lấy tên món ăn từ thẻ h3 của nút được nhấn
+        alert(`Discover more about the recipe: ${recipeName}`); // Hiển thị thông báo khám phá thêm về món ăn
     });
 });
 
-// Sticky Header Functionality
+// Chức năng Sticky Header
 window.addEventListener('scroll', function () {
     const header = document.querySelector('header');
-    header.classList.toggle('sticky', window.scrollY > 0);
+    header.classList.toggle('sticky', window.scrollY > 0); // Thêm hoặc xóa class sticky cho header khi cuộn trang
 });
 
-// Add "active" class to the current link in the nav
+// Thêm class "active" cho liên kết hiện tại trong menu điều hướng
 const navLinks = document.querySelectorAll('nav ul li a');
 navLinks.forEach(link => {
     link.addEventListener('click', function () {
-        navLinks.forEach(link => link.classList.remove('active'));
-        this.classList.add('active');
+        navLinks.forEach(link => link.classList.remove('active')); // Xóa class "active" khỏi tất cả các liên kết
+        this.classList.add('active'); // Thêm class "active" cho liên kết được nhấn
     });
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Lấy tất cả các thẻ recipe-card
+    const recipeCards = document.querySelectorAll('.recipe-card');
+    
+    recipeCards.forEach(function (card) {
+        card.addEventListener('click', function () {
+            // Lấy thuộc tính data-recipe để điều hướng đến đúng công thức (nếu có)
+            const recipeId = card.getAttribute('data-recipe');
+            
+            // Chuyển hướng đến trang congthuc.html
+            // Nếu cần sử dụng query để biết công thức nào, có thể thêm như sau:
+            window.location.href = `congthuc.html?recipe=${recipeId}`;
+        });
+    });
+});
+
 
 // Lặp qua từng thẻ recipe-card
 const recipeCards = document.querySelectorAll('.recipe-card');
@@ -83,6 +100,14 @@ recipeCards.forEach((card) => {
         });
     });
 });
+/*
+// Hiển thị/ẩn dropdown khi nhấn vào ảnh đại diện
+document.getElementById("profile-img").addEventListener("click", function(event) {
+    var dropdown = document.getElementById("dropdown-menu");
+    // Chuyển đổi giữa ẩn và hiển thị dropdown
+    dropdown.style.display = dropdown.style.display === "none" || dropdown.style.display === "" ? "block" : "none";
+    event.stopPropagation(); // Ngăn việc đóng dropdown khi nhấn vào ảnh đại diện
+});*/
 
 // Hiển thị/ẩn dropdown khi nhấn vào ảnh đại diện
 document.getElementById("profile-img").addEventListener("click", function(event) {
@@ -91,6 +116,19 @@ document.getElementById("profile-img").addEventListener("click", function(event)
     dropdown.style.display = dropdown.style.display === "none" || dropdown.style.display === "" ? "block" : "none";
     event.stopPropagation(); // Ngăn việc đóng dropdown khi nhấn vào ảnh đại diện
 });
+
+// Thêm sự kiện double-click vào ảnh đại diện để điều hướng đến user.html khi đã đăng nhập
+document.getElementById("profile-img").addEventListener("dblclick", function(event) {
+    // Kiểm tra nếu người dùng đã đăng nhập (isRegistered === 'true')
+    if (localStorage.getItem('isRegistered') === 'true') {
+        // Điều hướng đến trang user.html
+        window.location.href = 'user.html';
+    } else {
+        // Nếu chưa đăng nhập, có thể hiện thông báo hoặc không làm gì
+        alert('Vui lòng đăng nhập để truy cập trang người dùng.');
+    }
+});
+
 
 // Xử lý chức năng đăng xuất
 document.getElementById('logout-btn').addEventListener('click', function() {

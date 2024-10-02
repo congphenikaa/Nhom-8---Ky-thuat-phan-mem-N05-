@@ -1,4 +1,4 @@
-// Search functionality
+// Chức năng tìm kiếm
 document.getElementById('search').addEventListener('keyup', function (e) {
     const searchQuery = e.target.value.toLowerCase();
     const recipes = document.querySelectorAll('.recipe-card');
@@ -13,13 +13,13 @@ document.getElementById('search').addEventListener('keyup', function (e) {
     });
 });
 
-// Sticky Header Functionality
+// Chức năng header cố định khi cuộn trang
 window.addEventListener('scroll', function () {
     const header = document.querySelector('header');
     header.classList.toggle('sticky', window.scrollY > 0);
 });
 
-// Add "active" class to the current link in the nav
+// Thêm lớp "active" cho liên kết hiện tại trong thanh điều hướng
 const navLinks = document.querySelectorAll('nav ul li a');
 navLinks.forEach(link => {
     link.addEventListener('click', function () {
@@ -37,7 +37,7 @@ if (profileImg && dropdownMenu) {
         dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
     });
 
-    // Đóng dropdown khi nhấn ngoài
+    // Đóng dropdown khi nhấn bên ngoài
     window.addEventListener('click', function (event) {
         if (!event.target.closest('#profile-img') && !event.target.closest('#dropdown-menu')) {
             dropdownMenu.style.display = 'none';
@@ -62,7 +62,7 @@ window.onload = function() {
     }
 };
 
-// Quantity selector logic
+// Chức năng chọn số lượng
 let quantity = 2;
 const qtyValue = document.getElementById('qty-value');
 const qtyIncrease = document.getElementById('qty-increase');
@@ -70,32 +70,33 @@ const qtyDecrease = document.getElementById('qty-decrease');
 
 qtyIncrease.addEventListener('click', () => {
     quantity++;
-    qtyValue.textContent = `${quantity} persons`;
+    qtyValue.textContent = `${quantity} người`;
 });
 
 qtyDecrease.addEventListener('click', () => {
     if (quantity > 1) {
         quantity--;
-        qtyValue.textContent = `${quantity} persons`;
+        qtyValue.textContent = `${quantity} người`;
     }
 });
 
-// Save to Cookbook logic
+// Lưu công thức vào sách nấu ăn
 const saveBtn = document.querySelector('.save-btn');
 saveBtn.addEventListener('click', () => {
-    alert('Recipe saved to your cookbook!');
+    alert('Công thức đã được lưu vào sách nấu ăn của bạn!');
 });
 
+// Chức năng chuyển tab
 function opentab(evt, tabNub) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
-      tabcontent[i].style.display = "none";
+        tabcontent[i].style.display = "none";
     }
     tablinks = document.getElementsByClassName("tablinks");
     for (i = 0; i < tablinks.length; i++) {
-      tablinks[i].className = tablinks[i].className.replace(" active", "");
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
     }
     document.getElementById(tabNub).style.display = "block";
     evt.currentTarget.className += " active";
-  }
+}

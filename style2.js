@@ -1,6 +1,4 @@
-// script.js
-
-// Search functionality
+// Chức năng tìm kiếm
 document.getElementById('search').addEventListener('keyup', function (e) {
     const searchQuery = e.target.value.toLowerCase();
     const recipes = document.querySelectorAll('.recipe-card');
@@ -15,22 +13,22 @@ document.getElementById('search').addEventListener('keyup', function (e) {
     });
 });
 
-// Discover Recipe Button Functionality
+// Chức năng nút Discover Recipe
 const recipeButtons = document.querySelectorAll('.btn');
 recipeButtons.forEach(button => {
     button.addEventListener('click', function (e) {
         const recipeName = this.parentElement.querySelector('h3').textContent;
-        alert(`Discover more about the recipe: ${recipeName}`);
+        alert(`Tìm hiểu thêm về công thức: ${recipeName}`);
     });
 });
 
-// Sticky Header Functionality
+// Chức năng Sticky Header (Tiêu đề cố định khi cuộn trang)
 window.addEventListener('scroll', function () {
     const header = document.querySelector('header');
     header.classList.toggle('sticky', window.scrollY > 0);
 });
 
-// Add "active" class to the current link in the nav
+// Thêm lớp "active" vào liên kết hiện tại trong thanh điều hướng
 const navLinks = document.querySelectorAll('nav ul li a');
 navLinks.forEach(link => {
     link.addEventListener('click', function () {
@@ -84,12 +82,21 @@ recipeCards.forEach((card) => {
     });
 });
 
-// Hiển thị/ẩn dropdown khi nhấn vào ảnh đại diện
+// Hiển thị/ẩn menu thả xuống khi nhấn vào ảnh đại diện
 document.getElementById("profile-img").addEventListener("click", function(event) {
     var dropdown = document.getElementById("dropdown-menu");
     // Chuyển đổi giữa ẩn và hiển thị dropdown
     dropdown.style.display = dropdown.style.display === "none" || dropdown.style.display === "" ? "block" : "none";
     event.stopPropagation(); // Ngăn việc đóng dropdown khi nhấn vào ảnh đại diện
+});
+
+// Chức năng double-click vào ảnh đại diện để điều hướng đến user.html
+document.getElementById("profile-img").addEventListener("dblclick", function(event) {
+    if (localStorage.getItem('isRegistered') === 'true') {
+        window.location.href = 'user.html';
+    } else {
+        alert('Vui lòng đăng nhập để truy cập trang người dùng.');
+    }
 });
 
 // Xử lý chức năng đăng xuất
@@ -144,4 +151,3 @@ document.getElementById('contact-form').addEventListener('submit', function(even
         }, 2000);
     }
 });
-
