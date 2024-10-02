@@ -45,11 +45,14 @@ window.addEventListener('click', function(event) {
     }
 });
 
-// Chức năng điều hướng khi nhấn vào ảnh đại diện
-document.getElementById("profile-img").addEventListener("click", function(event) {
+// Thêm sự kiện double-click vào ảnh đại diện để điều hướng đến user.html khi đã đăng nhập
+document.getElementById("profile-img").addEventListener("dblclick", function(event) {
+    // Kiểm tra nếu người dùng đã đăng nhập (isRegistered === 'true')
     if (localStorage.getItem('isRegistered') === 'true') {
+        // Điều hướng đến trang user.html
         window.location.href = 'user.html';
     } else {
+        // Nếu chưa đăng nhập, có thể hiện thông báo hoặc không làm gì
         alert('Vui lòng đăng nhập để truy cập trang người dùng.');
     }
 });
@@ -169,7 +172,7 @@ let quantity = 2;
 const qtyValue = document.getElementById('qty-value');
 document.getElementById('qty-increase').addEventListener('click', () => {
     quantity++;
-    qtyValue.textContent = `${quantity} người`;
+    qtyValue.textContent = `${quantity} phần/người`;
 });
 document.getElementById('qty-decrease').addEventListener('click', () => {
     if (quantity > 1) {

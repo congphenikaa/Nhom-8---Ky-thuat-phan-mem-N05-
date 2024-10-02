@@ -18,12 +18,11 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="chinh.html">Home</a></li>
-                    <li><a href="#">Menu</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="chinh.html">Trang chủ</a></li>
+                    <li><a href="about.html">Giới thiệu</a></li>
+                    <li><a href="contact.html">Liên hệ</a></li>
                     <div id="login-section">
-                        <li><a href="dangki.html">Log/Sign In</a></li>
+                        <li><a href="dangki.html">Đăng ký/ Đăng nhập</a></li> <!-- Link đến trang đăng ký -->
                     </div>
                     <div id="logout-section" style="display: none;">
                         <div class="profile-container">
@@ -68,8 +67,33 @@
                 <div class="no-recipe">
                     <img src="anh/logo.png" alt="No Recipe Icon">
                     <p>Nào, bắt đầu viết cách làm món đầu tiên thôi!</p>
-                    <button class="write-recipe-btn">Viết món mới</button>
+                    <button class="write-recipe-btn" id="writeRecipeBtn">Viết món mới</button>
                 </div>
+
+                <div id="recipeModal" class="modal">
+                    <div id="recipeModalContent" class="modal-content">
+                        <span class="close">&times;</span>
+                        <h2>Thêm Món Mới</h2>
+                        <form id="newRecipeForm">
+                            <input type="text" id="recipeName" placeholder="Tên món ăn" required>
+                            <textarea id="recipeDescription" placeholder="Mô tả món ăn" rows="3" required></textarea>
+                            <label for="recipeImage">Ảnh minh họa:</label>
+                            <input type="file" id="recipeImage" accept="image/*" required>
+                            <label for="recipeVideo">Video cách làm:</label>
+                            <input type="file" id="recipeVideo" accept="video/*">
+                            <label for="recipeIngredients">Thành phần:</label>
+                            <div id="ingredientsSection">
+                                <div class="form-row">
+                                    <input type="text" placeholder="Tên nguyên liệu" required>
+                                    <input type="text" placeholder="Định lượng" required>
+                                </div>
+                            </div>
+                            <button type="button" id="addIngredientBtn">Thêm Nguyên Liệu</button>
+                            <button type="submit">Lưu Món Ăn</button>
+                        </form>
+                    </div>
+                </div>
+             
             </div>
             <div id="tab-3" class="tabcontent">
                 <p>Cooksnap của bạn sẽ hiển thị tại đây.</p>

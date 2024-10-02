@@ -62,29 +62,7 @@ window.onload = function() {
     }
 };
 
-// Chức năng chọn số lượng
-let quantity = 2;
-const qtyValue = document.getElementById('qty-value');
-const qtyIncrease = document.getElementById('qty-increase');
-const qtyDecrease = document.getElementById('qty-decrease');
 
-qtyIncrease.addEventListener('click', () => {
-    quantity++;
-    qtyValue.textContent = `${quantity} người`;
-});
-
-qtyDecrease.addEventListener('click', () => {
-    if (quantity > 1) {
-        quantity--;
-        qtyValue.textContent = `${quantity} người`;
-    }
-});
-
-// Lưu công thức vào sách nấu ăn
-const saveBtn = document.querySelector('.save-btn');
-saveBtn.addEventListener('click', () => {
-    alert('Công thức đã được lưu vào sách nấu ăn của bạn!');
-});
 
 // Chức năng chuyển tab
 function opentab(evt, tabNub) {
@@ -100,3 +78,44 @@ function opentab(evt, tabNub) {
     document.getElementById(tabNub).style.display = "block";
     evt.currentTarget.className += " active";
 }
+
+
+// Get modal elements
+const modal = document.getElementById('recipeModal');
+const btn = document.getElementById('writeRecipeBtn');
+const span = document.getElementsByClassName('close')[0];
+
+// Show the modal
+btn.onclick = function() {
+    modal.style.display = 'block';
+}
+
+// Close the modal
+span.onclick = function() {
+    modal.style.display = 'none';
+}
+
+// Close the modal when clicking outside of it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = 'none';
+    }
+}
+
+// Add more ingredients fields
+document.getElementById('addIngredientBtn').addEventListener('click', function() {
+    const newIngredient = document.createElement('div');
+    newIngredient.className = 'form-row';
+    newIngredient.innerHTML = `
+        <input type="text" placeholder="Tên nguyên liệu" required>
+        <input type="text" placeholder="Định lượng" required>
+    `;
+    document.getElementById('ingredientsSection').appendChild(newIngredient);
+});
+
+// Handle form submission
+document.getElementById('newRecipeForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    alert('Món ăn mới đã được lưu!');
+    modal.style.display = 'none';
+});

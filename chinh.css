@@ -442,6 +442,10 @@ footer {
     color: #FF6347;
 }
 
+.footer-section.newsletter .btn{
+    margin-top: 20px;
+}
+
 .social-icons a {
     color: #fff;
     margin: 0 10px;
