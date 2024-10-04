@@ -15,6 +15,7 @@ document.getElementById('search').addEventListener('keyup', function (e) {
     });
 });
 
+/*
 // Chức năng nút khám phá công thức
 const recipeButtons = document.querySelectorAll('.btn');
 recipeButtons.forEach(button => {
@@ -23,6 +24,7 @@ recipeButtons.forEach(button => {
         alert(`Discover more about the recipe: ${recipeName}`); // Hiển thị thông báo khám phá thêm về món ăn
     });
 });
+*/
 
 // Chức năng Sticky Header
 window.addEventListener('scroll', function () {
@@ -44,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const recipeCards = document.querySelectorAll('.recipe-card');
     
     recipeCards.forEach(function (card) {
-        card.addEventListener('click', function () {
+        card.addEventListener('dblclick', function () {
             // Lấy thuộc tính data-recipe để điều hướng đến đúng công thức (nếu có)
             const recipeId = card.getAttribute('data-recipe');
             
@@ -54,6 +56,26 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Lấy tất cả các thẻ recipe-card
+    const recipeCards = document.querySelectorAll('.recipe-card');
+    
+    recipeCards.forEach(function (card) {
+        // Tìm nút "Xem công thức" trong mỗi thẻ .recipe-card
+        const viewRecipeButton = card.querySelector('.btn');
+        
+        // Lắng nghe sự kiện click trên nút
+        viewRecipeButton.addEventListener('click', function () {
+            // Lấy thuộc tính data-recipe để điều hướng đến đúng công thức (nếu có)
+            const recipeId = card.getAttribute('data-recipe');
+            
+            // Chuyển hướng đến trang congthuc.html với query recipe
+                window.location.href = `congthuc.html?recipe=${recipeId}`;
+        });
+    });
+});
+
 
 
 // Lặp qua từng thẻ recipe-card
