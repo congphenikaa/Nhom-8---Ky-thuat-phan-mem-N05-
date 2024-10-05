@@ -136,6 +136,28 @@
         </div>
     </main>
     
+  <!-- Form modal báo cáo sai phạm -->
+    <div id="report-modal" class="modal">
+        <div class="modal-content">
+            <span id="close-report" class="close">&times;</span>
+            <h2>Gửi Báo Cáo</h2>
+            <form id="report-form">
+                <label for="report-name">Tên:</label>
+                <input type="text" id="report-name" required>
+
+                <label for="report-email">Email:</label>
+                <input type="email" id="report-email" required>
+
+                <label for="report-reason">Lý do báo cáo:</label>
+                <textarea id="report-reason" required></textarea>
+
+                <button type="submit">Gửi Báo Cáo</button>
+            </form>
+        </div>
+    </div>
+
+
+
 
     <!-- Footer -->
     <footer>

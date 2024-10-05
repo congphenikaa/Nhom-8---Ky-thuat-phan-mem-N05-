@@ -602,6 +602,84 @@ main ul li, main ol li {
     display: block;
 }
 
+/* Modal Báo cáo Vi Phạm */
+.modal {
+    display: none; /* Ẩn modal theo mặc định */
+    position: fixed; /* Giữ modal ở vị trí cố định */
+    z-index: 1000; /* Đảm bảo modal ở phía trên các thành phần khác */
+    left: 0;
+    top: 0;
+    width: 100%; /* Chiều rộng toàn trang */
+    height: 100%; /* Chiều cao toàn trang */
+    background-color: rgba(0, 0, 0, 0.5); /* Nền tối mờ phía sau modal */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal content box */
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    animation: fadeIn 0.3s ease; /* Hiệu ứng fade in khi mở modal */
+}
+
+/* Đóng modal */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Form fields */
+.modal-content label {
+    display: block;
+    margin-top: 10px;
+}
+
+.modal-content input,
+.modal-content textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Submit button */
+.modal-content button {
+    background-color: #FF6347;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+
+.modal-content button:hover {
+    background-color: #e0523a;
+}
+
+/* Hiệu ứng mở modal */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
 
 
 /* Footer */

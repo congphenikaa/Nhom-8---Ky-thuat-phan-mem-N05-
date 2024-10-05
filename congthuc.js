@@ -259,9 +259,26 @@ function editComment(index) {
 }
 
 // Chức năng báo cáo sai phạm
+// Mở modal khi nhấn nút "Báo cáo sai phạm"
 document.getElementById('report-btn').addEventListener('click', function () {
-    alert('Báo cáo của bạn đã được gửi. Cảm ơn bạn đã đóng góp!');
+    document.getElementById('report-modal').style.display = 'flex';
 });
+
+// Đóng modal khi nhấn vào nút "x" hoặc ra ngoài modal
+document.getElementById('close-report').addEventListener('click', function () {
+    document.getElementById('report-modal').style.display = 'none';
+    alert('Báo cáo của bạn đã được gửi. Cảm ơn bạn đã đóng góp!'); // Hiển thị thông báo
+});
+
+// Đóng modal khi nhấn bên ngoài vùng modal
+window.addEventListener('click', function (event) {
+    const modal = document.getElementById('report-modal');
+    if (event.target === modal) {
+        modal.style.display = 'none';
+        alert('Báo cáo của bạn đã được gửi. Cảm ơn bạn đã đóng góp!'); // Hiển thị thông báo
+    }
+});
+
 
 
 // Thêm bình luận vào giao diện từ localStorage
