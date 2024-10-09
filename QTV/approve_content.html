@@ -1,0 +1,45 @@
+<!-- approve_content.html -->
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiểm duyệt nội dung</title>
+    <link rel="stylesheet" href="approve_content.css">
+</head>
+<body>
+    <header>
+        <h1>Kiểm duyệt nội dung</h1>
+        <nav>
+            <ul>
+                <li><a href="qtv.html">Trang chủ Quản trị viên</a></li>
+                <li><a href="manage_recipes.html">Quản lý công thức nấu ăn</a></li>
+                <li><a href="manage_users.html">Quản lý người dùng</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="content-approval">
+            <h2>Danh sách nội dung cần duyệt</h2>
+            <table id="contentTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Tên công thức</th>
+                        <th>Tác giả</th>
+                        <th>Ngày gửi</th>
+                        <th>Hành động</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Nội dung chờ duyệt sẽ được thêm từ JavaScript -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Quản trị viên - Trang web công thức nấu ăn</p>
+    </footer>
+    <script src="approve_content.js"></script>
+</body>
+</html>

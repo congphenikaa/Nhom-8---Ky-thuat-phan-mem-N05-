@@ -1,0 +1,66 @@
+<!-- manage_recipes.html -->
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý công thức nấu ăn</title>
+    <link rel="stylesheet" href="manage_recipes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Quản lý công thức nấu ăn</h1>
+        <nav>
+            <ul>
+                <li><a href="qtv.html">Trang chủ Quản trị viên</a></li>
+                <li><a href="manage_users.html">Quản lý người dùng</a></li>
+                <li><a href="approve_content.html">Kiểm duyệt nội dung</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="recipe-management">
+            <h2>Danh sách công thức nấu ăn</h2>
+            <button id="addRecipeBtn" class="btn-add">Thêm công thức</button>
+            <table id="recipeTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Tên công thức</th>
+                        <th>Tác giả</th>
+                        <th>Ngày tạo</th>
+                        <th>Hành động</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Hàng công thức sẽ được thêm từ JavaScript -->
+                </tbody>
+            </table>
+        </section>
+
+        <div id="recipeFormModal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <h2>Thêm/Sửa công thức nấu ăn</h2>
+                <form id="recipeForm">
+                    <label for="recipeName">Tên công thức:</label>
+                    <input type="text" id="recipeName" name="recipeName" required>
+
+                    <label for="author">Tác giả:</label>
+                    <input type="text" id="author" name="author" required>
+
+                    <label for="date">Ngày tạo:</label>
+                    <input type="date" id="date" name="date" required>
+
+                    <button type="submit" class="btn-save">Lưu</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Quản trị viên - Trang web công thức nấu ăn</p>
+    </footer>
+    <script src="manage_recipes.js"></script>
+</body>
+</html>
