@@ -267,7 +267,6 @@ document.getElementById('report-btn').addEventListener('click', function () {
 // Đóng modal khi nhấn vào nút "x" hoặc ra ngoài modal
 document.getElementById('close-report').addEventListener('click', function () {
     document.getElementById('report-modal').style.display = 'none';
-    alert('Báo cáo của bạn đã được gửi. Cảm ơn bạn đã đóng góp!'); // Hiển thị thông báo
 });
 
 // Đóng modal khi nhấn bên ngoài vùng modal
@@ -275,7 +274,7 @@ window.addEventListener('click', function (event) {
     const modal = document.getElementById('report-modal');
     if (event.target === modal) {
         modal.style.display = 'none';
-        alert('Báo cáo của bạn đã được gửi. Cảm ơn bạn đã đóng góp!'); // Hiển thị thông báo
+       
     }
 });
 

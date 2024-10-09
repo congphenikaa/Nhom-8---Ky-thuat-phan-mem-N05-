@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thống kê & Báo cáo</title>
+    <link rel="stylesheet" href="view_stats.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Thư viện Chart.js -->
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Thống kê & Báo cáo</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="manage_users.html">Quản lý người dùng</a></li>
+                <li><a href="manage_recipes.html">Quản lý công thức</a></li>
+                <li><a href="approve_content.html">Kiểm duyệt nội dung</a></li>
+                <li><a href="view_stats.html">Thống kê hoạt động</a></li>
+                <li><a href="settings.html">Cài đặt hệ thống</a></li>
+            </ul>
+        </nav>
+        <main>
+            <h2>Biểu đồ Thống kê</h2>
+            <canvas id="userChart" width="400" height="200"></canvas>
+            <canvas id="recipeChart" width="400" height="200"></canvas>
+        </main>
+        <footer>
+            <p>&copy; 2024 Công thức nấu ăn</p>
+        </footer>
+    </div>
+    <script src="view_stats.js"></script>
+</body>
+</html>

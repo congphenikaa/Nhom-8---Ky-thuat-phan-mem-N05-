@@ -1,0 +1,55 @@
+/* qtv.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffcccb; /* Background màu nóng nhẹ */
+    color: #333;
+}
+
+header {
+    background-color: #ff6347; /* Màu đỏ cam */
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+.dashboard {
+    display: flex;
+    justify-content: space-around;
+}
+
+.stat {
+    background-color: #ff7f50; /* Màu nóng */
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #ff6347;
+    color: white;
+}
